@@ -16,6 +16,7 @@ after_success:
   - docker build -t pp9119/multi-server ./server
   - docker build -t pp9119/multi-worker ./worker
   # Log in to the docker CLI
+#  - echo "$DOCKER_MY_PASSWORD" | docker login -u "$DOCKER_MY_ID" --password-stdin
   - echo "$DOCKER_MY_PASSWORD" | docker login -u "$DOCKER_MY_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push pp9119/multi-client
